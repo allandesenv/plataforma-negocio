@@ -1,0 +1,6 @@
+server:
+  port: 8080 # Porta para o auth-service, conforme o documento de arquitetura
+
+spring:
+  application:
+    name: auth-service # Nome da aplicação
