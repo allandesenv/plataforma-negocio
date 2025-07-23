@@ -1,21 +1,41 @@
 server:
-  port: 8085 # Porta para o gateway-service, conforme o documento de arquitetura
+  port: 8085
 
 spring:
-  application:
-    name: gateway-service # Nome da aplicação, importante para service discovery
+  # O nome da aplicação já está no bootstrap.yml
+  # application:
+  #   name: gateway-service
   cloud:
     gateway:
       routes:
+        # Rota para o Auth Service
+        - id: auth_service_route
+          uri: lb://AUTH-SERVICE # Roteia para o serviço AUTH-SERVICE descoberto pelo Eureka
+          predicates:
+            - Path=/auth/** # Qualquer requisição para /auth/**
+        # Rota de exemplo existente (pode ser removida depois, mas manter por enquanto para testes)
         - id: example_route
-          uri: https://httpbin.org/ # Um serviço público de teste
+          uri: https://httpbin.org/
           predicates:
             - Path=/httpbin/**
           filters:
-            - StripPrefix=1 # Remove o primeiro segmento do path (httpbin)
-# Configurações do SpringDoc OpenAPI
+            - StripPrefix=1
+  # Configurações do Eureka Client
+  eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka/ # URL do nosso Discovery Service (Eureka)
+    instance:
+      hostname: localhost # Nome do host da instância no Eureka (para dev)
+
+# Configurações do SpringDoc OpenAPI (mantidas)
 springdoc:
   swagger-ui:
-    path: /swagger-ui.html # Caminho para acessar a interface do Swagger UI
+    path: /swagger-ui.html
   api-docs:
-    path: /v3/api-docs # Caminho para o arquivo OpenAPI JSON/YAML
+    path: /v3/api-docs
+
+# ADICIONAR AS PROPRIEDADES JWT AQUI
+jwt:
+  secret: SuaChaveSecretaSuperSeguraENaoObviaParaAssinaturaDoJWT1234567890abcdef # Use a mesma chave que no auth-service
+  expiration: 86400000 # Mesma expiração que no auth-service

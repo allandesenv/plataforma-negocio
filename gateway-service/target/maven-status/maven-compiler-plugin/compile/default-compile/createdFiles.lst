@@ -1,1 +1,3 @@
+com\plataformanegocios\sufix\gatewayservice\filter\AuthenticationFilter.class
 com\plataformanegocios\sufix\gatewayservice\GatewayServiceApplication.class
+com\plataformanegocios\sufix\gatewayservice\config\GatewaySecurityConfig.class
