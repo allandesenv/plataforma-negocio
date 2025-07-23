@@ -1,0 +1,14 @@
+server:
+  port: 8761 # Porta para o discovery-service, conforme o documento de arquitetura
+
+spring:
+  application:
+    name: discovery-service # Nome da aplicação Eureka Server
+
+eureka:
+  client:
+    register-with-eureka: false # Não queremos que o próprio Eureka Server se registre nele mesmo
+    fetch-registry: false       # Não queremos que ele busque o registro de outros serviços (ele é o servidor)
+  server:
+    enable-self-preservation: false # Desativa a auto-preservação para ambientes de desenvolvimento (evita que instâncias "sumam" falsamente)
+    eviction-interval-timer-in-ms: 5000 # Frequência de verificação de instâncias inativas (5 segundos)

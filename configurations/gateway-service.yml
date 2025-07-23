@@ -1,0 +1,4 @@
+# Exemplo de configuração para o gateway-service (para ser servido pelo config-server)
+message: Hello from Config Server to Gateway!
+server:
+  port: 8085 # A porta pode ser configurada aqui também, ou no application.yml do serviço

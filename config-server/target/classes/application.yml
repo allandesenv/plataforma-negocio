@@ -1,0 +1,17 @@
+server:
+  port: 8888 # Porta para o config-server, conforme o documento de arquitetura
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        # Configuração para buscar propriedades de um diretório local (filesystem)
+        # No futuro, podemos mudar para um repositório Git
+        native:
+          search-locations: file:./configurations # Onde o Config Server vai procurar os arquivos de configuração
+        # Ignora erros ao buscar configurações
+        fail-fast: false

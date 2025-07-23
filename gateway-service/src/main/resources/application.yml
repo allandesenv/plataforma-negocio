@@ -1,0 +1,21 @@
+server:
+  port: 8085 # Porta para o gateway-service, conforme o documento de arquitetura
+
+spring:
+  application:
+    name: gateway-service # Nome da aplicação, importante para service discovery
+  cloud:
+    gateway:
+      routes:
+        - id: example_route
+          uri: https://httpbin.org/ # Um serviço público de teste
+          predicates:
+            - Path=/httpbin/**
+          filters:
+            - StripPrefix=1 # Remove o primeiro segmento do path (httpbin)
+# Configurações do SpringDoc OpenAPI
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html # Caminho para acessar a interface do Swagger UI
+  api-docs:
+    path: /v3/api-docs # Caminho para o arquivo OpenAPI JSON/YAML
