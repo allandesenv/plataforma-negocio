@@ -1,7 +1,9 @@
+C:\plataforma-negocio\auth-service\src\main\java\com\plataformanegocios\sufix\authservice\repository\UserRepository.java
 C:\plataforma-negocio\auth-service\src\main\java\com\plataformanegocios\sufix\authservice\util\JwtUtil.java
 C:\plataforma-negocio\auth-service\src\main\java\com\plataformanegocios\sufix\authservice\AuthServiceApplication.java
 C:\plataforma-negocio\auth-service\src\main\java\com\plataformanegocios\sufix\authservice\config\SecurityConfig.java
 C:\plataforma-negocio\auth-service\src\main\java\com\plataformanegocios\sufix\authservice\controller\AuthController.java
+C:\plataforma-negocio\auth-service\src\main\java\com\plataformanegocios\sufix\authservice\model\User.java
 C:\plataforma-negocio\auth-service\src\main\java\com\plataformanegocios\sufix\authservice\dto\AuthResponse.java
 C:\plataforma-negocio\auth-service\src\main\java\com\plataformanegocios\sufix\authservice\filter\JwtRequestFilter.java
 C:\plataforma-negocio\auth-service\src\main\java\com\plataformanegocios\sufix\authservice\dto\AuthRequest.java
