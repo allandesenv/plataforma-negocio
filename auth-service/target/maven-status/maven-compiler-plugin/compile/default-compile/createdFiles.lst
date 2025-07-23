@@ -1,2 +1,7 @@
-com\plataformanegocios\sufix\authservice\config\SecurityConfig.class
+com\plataformanegocios\sufix\authservice\util\JwtUtil.class
+com\plataformanegocios\sufix\authservice\controller\AuthController.class
 com\plataformanegocios\sufix\authservice\AuthServiceApplication.class
+com\plataformanegocios\sufix\authservice\config\SecurityConfig.class
+com\plataformanegocios\sufix\authservice\dto\AuthRequest.class
+com\plataformanegocios\sufix\authservice\dto\AuthResponse.class
+com\plataformanegocios\sufix\authservice\filter\JwtRequestFilter.class
