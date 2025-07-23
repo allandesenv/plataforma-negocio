@@ -9,6 +9,13 @@ spring:
       # SUA URI DE CONEXÃO DO MONGODB ATLAS INSERIDA AQUI
       uri: mongodb+srv://admin:admin@cluster0.prstvrf.mongodb.net/auth_db?retryWrites=true&w=majority&appName=Cluster0
 
+eureka: # ADICIONE ESTA SEÇÃO SE NÃO ESTIVER LÁ
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/ # URL do Discovery Service
+  instance:
+    hostname: localhost # Para desenvolvimento
+
 jwt:
   secret: SuaChaveSecretaSuperSeguraENaoObviaParaAssinaturaDoJWT1234567890abcdef # Altere para uma string longa e aleatória
   expiration: 86400000 # Tempo de expiração em milissegundos (24 horas)
