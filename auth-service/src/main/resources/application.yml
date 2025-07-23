@@ -4,3 +4,7 @@ server:
 spring:
   application:
     name: auth-service # Nome da aplicação
+
+jwt:
+  secret: SuaChaveSecretaSuperSeguraENaoObviaParaAssinaturaDoJWT1234567890abcdef # Altere para uma string longa e aleatória
+  expiration: 86400000 # Tempo de expiração em milissegundos (24 horas)
