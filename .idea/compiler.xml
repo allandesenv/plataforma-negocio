@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="auth-service" />
+        <module name="ingestao-service" />
         <module name="gateway-service" />
         <module name="discovery-service" />
       </profile>
