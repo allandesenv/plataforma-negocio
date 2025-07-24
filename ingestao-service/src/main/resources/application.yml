@@ -1,0 +1,13 @@
+server:
+  port: 8081 # Porta para o ingestao-service, conforme o documento de arquitetura (8081)
+
+spring:
+  # O nome da aplicação já está no bootstrap.yml
+  # application:
+  #   name: ingestao-service
+  eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka/ # URL do nosso Discovery Service (Eureka)
+    instance:
+      hostname: localhost # Nome do host da instância no Eureka (para dev)

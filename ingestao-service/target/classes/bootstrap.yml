@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: ingestao-service # Nome da aplicação para o Config Server e Eureka
+  config:
+    import: optional:configserver:http://localhost:8888 # URL do nosso Config Server
